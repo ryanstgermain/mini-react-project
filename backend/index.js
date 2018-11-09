@@ -1,14 +1,22 @@
-const http = require('http');
+var express = require('express')
+var cors = require('cors')
+var app = express()
 
-const hostname = '127.0.0.1';
-const port = 3001;
+app.use(cors())
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
-});
+app.use(function (req, res, next) {
+    res.status(404).send("Sorry I can't find that!")
+})
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke...')
+})
+
+app.get('/products/:id', function(req, res, next) {
+    res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+app.listen(3001, function () {
+    console.log('CORS-enabled web server listening on port 3001')
+})
