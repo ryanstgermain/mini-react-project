@@ -1,4 +1,4 @@
-- A basic full CRUD app that is uses a geek joke API and generates funny jokes using a button.
+- A basic full CRUD app that generates Rick and Morty info.
     - Has a GET route for all
     - Has a GET route by id
     - Has a POST route
