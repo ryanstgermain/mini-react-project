@@ -1,4 +1,4 @@
-- A basic full CRUD app that generates Rick and Morty info.
+- A basic full CRUD app that generates Overwatch character ultimate abilities.
     - Has a GET route for all
     - Has a GET route by id
     - Has a POST route
