@@ -1,0 +1,8 @@
+- A basic full CRUD app that is uses a geek joke API and generates funny jokes using a button.
+    - Has a GET route for all
+    - Has a GET route by id
+    - Has a POST route
+    - Has a PUT route
+    - Has a DELETE route
+    - Has a 404 handler
+    - Has a 500 handler
